@@ -2,23 +2,11 @@ import React, {useState} from 'react';
 import { RiCloseCircleLine } from "react-icons/ri";
 import { TiEdit } from "react-icons/ti";
 
-function Todo({todos, completeTodo, removeTodo}) {
+function Todo({todos, completeTodo, removeTodo, updateTodo}) {
   const [edit, setEdit] = useState({
     id: null,
     value: ''
   });
-
-  const completeTodo = (id) => {
-    const updatedTodos = todos.map(todo => {
-      if (todo.id === id) {
-        todo.isComplete = !todo.isComplete;
-      }
-
-      return todo;
-    });
-    setTodos(updatedTodos);
-  };
-
 
   return todos.map((todo, index) => {
     <div
