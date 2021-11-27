@@ -86,11 +86,11 @@ const TodoList = () => {
   }
 
   return (
-    <div>
+    <>
       <h1>To-Do List</h1>
       <TodoForm onSubmit={addTodo} />
       <Todo todos={todos} completeTodo={completeTodo} removeTodo={removeTodo} updateTodo={updateTodo} />
-    </div>
+    </>
   );
 }
 
