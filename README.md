@@ -1,14 +1,11 @@
 # Introduction
-N/A
+This is a simple To-Do list application following the [Intro to React](/) tutorial.
 
 # Usage
-N/A
-
-# Notes
-N/A
+1. Clone repo
+2. `npm install && npm start`
+3. Open `http://localhost:3000`
+4. Create a To-Do list
 
 # Requirements & Dependencies
 N/A
-
-# Previews
-![preview image](https://via.placeholder.com/350x240)
