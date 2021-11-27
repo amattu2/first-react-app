@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+// Imports
+import React, { useState, useEffect } from "react";
+import { useLocalStorage } from "../Providers/LocalStorage";
 import TodoForm from "./TodoForm";
 import Todo from "./Todo";
 
 const TodoList = () => {
+  const storage = useLocalStorage();
   const [todos, setTodos] = useState([]);
 
   /**
@@ -20,8 +23,8 @@ const TodoList = () => {
     const newTodos = [todo, ... todos];
 
     setTodos(newTodos);
+    storage.storeItems(newTodos);
   };
-
   /**
    * Remove a To-Do item
    *
@@ -34,6 +37,7 @@ const TodoList = () => {
     const removeArray = [...todos].filter(todo => todo.id !== id);
 
     setTodos(removeArray);
+    storage.storeItems(removeArray);
   }
 
   /**
@@ -66,6 +70,7 @@ const TodoList = () => {
     });
 
     setTodos(updatedTodos);
+    storage.storeItems(updatedTodos);
   };
 
   /**
@@ -84,6 +89,10 @@ const TodoList = () => {
 
     // TBD
   }
+
+  useEffect(() => {
+    setTodos(storage.getItems());
+  }, [storage]);
 
   return (
     <>

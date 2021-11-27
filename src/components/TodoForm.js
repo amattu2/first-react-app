@@ -1,3 +1,4 @@
+// Imports
 import React, { useState } from 'react';
 
 const TodoForm = (props) => {
@@ -30,6 +31,7 @@ const TodoForm = (props) => {
         name="text"
         className="todo-input"
         onChange={handleChange}
+        autoFocus
       />
       <button className="todo-button">Add</button>
     </form>
