@@ -11,3 +11,6 @@ This is a simple To-Do list application following the [Intro to React](https://w
 - [ ] Implement item "Edit" option
 - [ ] Visual redesign
 - [ ] Use an actual To-Do storage mechanism (i.e. Database)
+
+# Preview
+![preview image](preview.png)
