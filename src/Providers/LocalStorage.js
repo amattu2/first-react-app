@@ -1,5 +1,5 @@
 // Imports
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const Context = React.createContext(null);
 
